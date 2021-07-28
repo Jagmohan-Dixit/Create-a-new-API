@@ -24,7 +24,7 @@ def addrec():
             eml = request.form['eml']
             sem = request.form['sem']
             
-            with mysql.connector.connect(host="localhost",user="jagmohan",password="mySQLjagmohan@5252",database="jaggudb") as con:
+            with mysql.connector.connect(host="localhost",user="**********",password="**********",database="*********") as con:
 
                 cur = con.cursor()
                 
@@ -61,25 +61,9 @@ def list():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @app.route('/api')
 def student():
-    con = mysql.connector.connect(host="localhost",user="jagmohan",password="mySQLjagmohan@5252",database="jaggudb") 
+    con = mysql.connector.connect(host="localhost",user="********",password="********",database="********") 
     
     cur = con.cursor()
 
@@ -99,20 +83,7 @@ def student():
         result.append(d)
             
 
-
     return jsonify(result)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
