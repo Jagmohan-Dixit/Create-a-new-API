@@ -1,6 +1,6 @@
 import mysql.connector
 
-conn =mysql.connector.connect(host="localhost",user="jagmohan",password="mySQLjagmohan@5252",database="jaggudb")
+conn =mysql.connector.connect(host="localhost",user="*********",password="**********",database="*********")
 
 print("Database Opened Suceessfully")
 cur = conn.cursor()
