@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        background-color: rgb(166, 209, 26);
+    }
+
+    .college{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .goback{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .form{
+        border-radius: 35px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .cc{
+        border-radius: 35px;
+        background-color: rgb(207, 180, 171);
+        margin-top: 30px;
+    }
+
+    .btn{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .submit{
+        width: 10%;
+        background-color: rgb(10, 57, 110);
+        color: aliceblue;
+        text-decoration: none; 
+        /* color: #2c0c0c; */
+        outline: none;
+        padding: 13px 30px;
+        font-weight: 700;
+        font-size: 25px;
+        border-radius: 30px;
+        border: none;
+        
+
+    }
+    .button{
+        text-decoration: none; 
+        /* color: #2c0c0c; */
+        outline: none;
+        padding: 13px 30px;
+        font-weight: 700;
+        font-size: 25px;
+        border-radius: 30px;
+        border: none;
+    }
+
+    
+
+
+</style>
+
+<body>
+    <div class="college"><img src="http://www.iiitt.ac.in/images/logo-iiit.png" /></div>
+    <form action = "{{url_for('findstudent')}}" method='POST' class="form">
+        <h1>Enter The Name Of Student To Get Details </h1>
+        <input class="cc" type="text" name="nm" size=35 
+        style="height: 50px;font-size: 20px;font-size: 25px;" placeholder="  Enter Student Name ..." required/><br>
+
+   
+    <div class="btn">
+        <input class="submit" type="submit" value="Submit" />
+    </div>
+</form>
+<br /><br /><br />
+<h2 class="goback"><a href="/">Go Back To Home</a></h2>
+
+</body>
+</html>

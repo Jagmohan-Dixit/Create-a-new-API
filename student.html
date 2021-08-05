@@ -1,0 +1,76 @@
+<html>
+    <style>
+        html{
+            background-color: chocolate;
+        }
+        .main{
+            color: rgb(2, 2, 2);
+            align-items: center;
+            text-align: center;
+        }
+        .head{
+            font-size: 45px;
+            margin-top: 50px;
+        }
+        .college{
+            align-items: center;
+            text-align: center;
+        }
+        .main{
+            display: flex;
+        }
+        .form{
+            margin-left: 100px;
+        }
+        .cc{
+            border-radius: 35px;
+        }
+
+        .button-smart{
+            background: rgb(10, 57, 110);
+        }
+        .submit{
+            background-color: rgb(10, 57, 110);
+            color: aliceblue;
+        }
+        .button{
+            text-decoration: none; 
+            color: #2c0c0c;
+            outline: none;
+            padding: 13px 30px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 30px;
+            border: none;
+        }
+
+
+
+}
+    </style>
+    <body>
+        <div class="college"><img src="http://www.iiitt.ac.in/images/logo-iiit.png" /></div>
+        <div class="main">
+            <div class="const"><img src="http://www.iiitt.ac.in/images/newslide/03.png" /></div>
+        <form action = "{{url_for('addrec')}}" method='POST' class="form">
+            <h1 class="head">ADD NEW STUDENT'S DETAILS</h1>
+            <h2>Name</h2>
+            <input class="cc" type="text" name="nm" size=35 style="height: 50px;font-size: 20px;" placeholder="  Enter Your Name"/><br>
+            <h2>Roll Number</h2>
+            <input class="cc" type="text" name="roll" size=35 style="height: 50px;font-size: 20px;" placeholder="  Enter Your Roll No" /><br>
+            <h2>Branch</h2>
+            <input class="cc" type="text" name="br" size=35 style="height: 50px;font-size: 20px;" placeholder="  Enter Your Branch"/><br>
+            <h2>Email</h2>
+            <input class="cc" type="text" name="eml" size=35 style="height: 50px;font-size: 20px;" placeholder="  Enter Your Email"/><br>
+            <h2>Semester Number</h2>
+            <input class="cc" type="text" name="sem" size=35 style="height: 50px;font-size: 20px;" placeholder="  Enter Your Semester"/><br>
+            <br />
+            <button type="button" class="button button-smart"><input class="submit" type="submit" value="Submit" size=25 style="height: 35px;font-size: 20px;" /></button>
+            <!-- <div class="delivery__button">
+                <a href="" class="button button-delivery">&emsp;&emsp;&emsp;&emsp;&emsp;SUBMIT
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
+            </div> -->
+        </form>
+        </div>
+    </body>
+</html>

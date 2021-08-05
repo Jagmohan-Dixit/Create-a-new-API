@@ -1,0 +1,70 @@
+<html>
+    <style>
+        html{
+            background-color: darkorchid;
+        }
+        .college{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .goback{
+            display: flex;
+            justify-content: center;
+            color: black;
+        }
+        .tbl{
+            margin-left: 350px;
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        
+        
+    </style>
+    <body>
+        <div class="college"><img src="http://www.iiitt.ac.in/images/logo-iiit.png" /></div>
+        <br /><br /><br />
+
+        {% for row in rows %} 
+                
+                {% if row[0] == name %}
+
+        <h1 class="heading">&nbsp;&nbsp;&nbsp;&nbsp;{{row[0]}}'S  &nbsp;&nbsp; DETAILS</h1>
+
+        {% endif %}
+        {% endfor %}
+
+        <table class="tbl">
+            <thead class = "tablehead">
+                <td><h2>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                <td><h2>Roll Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                
+                <td><h2>Semester &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                <td><h2>Branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+                <td><h2>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td> &NonBreakingSpace;
+                </thead>
+            <tbody class="table-body">
+            <!-- {{rows}} -->
+                {% for row in rows %} 
+                
+                {% if row[0] == name %}
+
+                <tr class="data">
+                    
+                    <td><h3>{{row[0]}}</h3></td> &nbsp;&nbsp;
+                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{row[1]}}</h3></td>&nbsp;&nbsp;
+                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{row[4]}}</h3></td>&nbsp;&nbsp;
+                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;{{row[2]}}</h3></td>&nbsp;&nbsp;
+                    <td><h3>{{row[3]}}</h3></td>&nbsp;&nbsp;
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <br /><br /><br /><br /><br /><br />
+        <h2 class="goback"><a href="/" class="goback">Go Back To Home</a></h2>
+
+    </body>
+</html>
